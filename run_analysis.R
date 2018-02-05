@@ -62,5 +62,6 @@ print("Making tidy data set")
 #dplyr is so good. Doing it.
 tidyDataSet <- merged_set %>% group_by(activity,subject) %>% summarize_all(mean) %>% as.data.frame
 
+write.table(tidyDataSet,"tidyDataSet.txt", row.name = FALSE)
 print("Done. Check tidyDataSet for result!")
 
